@@ -1,0 +1,135 @@
+.welcome {
+  background-image: url("../images/contact.jpg");
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  grid-auto-rows: auto;
+  padding: 3% 15%;
+  grid-gap: 15%;
+  text-transform: uppercase;
+}
+
+.form h1, .form h4, .social h1{
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+form{
+  display: grid;
+  grid-row: 2;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: auto;
+  grid-gap: 30px;
+}
+
+/*-------------------input add ons----------------------*/
+.InputAddOn {
+  display: flex;
+}
+
+.InputAddOn-field {
+  flex: 1;
+}
+.InputAddOn-field:not(:first-child) {
+  border-left: 0;
+}
+.InputAddOn-field:not(:last-child) {
+  border-right: 0;
+}
+
+.InputAddOn-item, button {
+  background-color: rgba(147, 128, 108, 0.1);
+  color: #666666;
+}
+
+.InputAddOn-field,
+.InputAddOn-item, textarea, button {
+  border: 1px solid rgba(147, 128, 108, 0.25);
+  padding: 0.5em 0.75em;
+  font-family: "Roboto", sans-serif;
+  font-size: medium;
+}
+.InputAddOn-field:first-child,
+.InputAddOn-item:first-child {
+  border-radius: 2px 0 0 2px;
+}
+.InputAddOn-field:last-child,
+.InputAddOn-item:last-child {
+  border-radius: 0 2px 2px 0;
+}
+/*------------------input add ons -----------------------*/
+
+.social a{
+  text-align: center;
+  text-decoration: none;
+  color:  rgba(255, 255, 255, 0.8);
+  height: 40px;
+  width: 40px;
+  margin: 0 7px;
+  line-height: 40px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.social h1{
+  margin-left: 7px;
+  margin-right: 7px;
+}
+
+.social a:hover{
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+input, textarea{
+  width: 100%;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+textarea{
+  grid-column: 1 / -1;
+  grid-row: 2;
+}
+
+.aside{
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  /*padding: 0 10%;*/
+}
+
+@media screen and (max-width: 1050px) {
+  .main {
+    padding: 10% 7%;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .main {
+    grid-template-columns: 1fr;
+  }
+
+  form{
+    grid-template-columns: 1fr;
+  }
+  textarea{
+    grid-row: 3;
+  }
+  .nav-menu, .nav-menu a{
+    display: none;
+  }
+  .hamburger{
+    display: block;
+    grid-column: 3;
+  }
+  .aside {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .welcome{
+    padding: 20vh 0;
+  }
+}

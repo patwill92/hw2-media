@@ -1,0 +1,224 @@
+html {
+  height: 100%;
+}
+
+body{
+  font-family: "Roboto", sans-serif;
+  min-height: 100%;
+  margin: 0;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+
+.grid{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: minmax(80px, auto) auto auto auto;
+  grid-auto-rows: auto;
+}
+
+/*---------------------------------HEADER---------------------------------------------*/
+
+header{
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-auto-rows: minmax(80px, auto);
+  align-items: center;
+  padding: 0;
+  background-color: white;
+  -webkit-box-shadow: 0 0 0.5px 0.5px rgba(255,255,255,1) ;
+  box-shadow: 0 0 0.5px 0.5px rgba(255,255,255,1) ;
+}
+
+.brand-container{
+  height: 70px;
+  width: 70px;
+  margin: 0 10px;
+  grid-column: 1;
+  grid-row: 1 / span 1;
+  border-radius: 50%;
+  background-image: url("../images/hexabump.png");
+  background-repeat: repeat;
+}
+
+header .brand{
+  text-align: center;
+  line-height: 70px;
+  font-weight: 300;
+  margin: 0;
+  color: white;
+  letter-spacing: 2px;
+  border-radius: 50%;
+}
+
+.nav-item{
+  color: gray;
+  font-weight: 300;
+  text-transform: uppercase;
+  padding: 10px;
+  text-decoration: none;
+}
+
+header .nav-item:hover{
+  color: black;
+}
+
+.hamburger{
+  display: none;
+}
+
+.is-active .hamburger-inner,
+.is-active .hamburger-inner::before,
+.is-active .hamburger-inner::after{
+  background-color: black;
+}
+
+.hamburger:hover .hamburger-inner,
+.hamburger:hover .hamburger-inner::before,
+.hamburger:hover .hamburger-inner::after {
+  background-color: black;
+}
+
+.hamburger:focus{
+  outline-color: transparent;
+}
+
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after{
+  height: 1px;
+}
+
+.nav-menu{
+  grid-column: 3;
+  grid-row: 1 / span 1;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+}
+
+.toggle-menu {
+  grid-column: 1/-1;
+  z-index: 0;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  border-bottom: 0.5px solid gray;
+}
+
+.remove{
+ display: none;
+}
+
+.toggle-menu a{
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  border-top: 0.5px solid gray;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+}
+/*------------------------------------FOOTER-----------------------------------------*/
+
+footer{
+  background-image: url("../images/hexabump.png");
+  background-repeat: repeat;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: auto;
+  padding: 2% 2%;
+  text-align: center;
+}
+
+.footer-item{
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 300;
+  text-transform: uppercase;
+  margin: 0 20px;
+}
+
+.footer-item:hover, .foot-contact a:hover{
+  color: rgba(255, 255, 255, 0.7);
+}
+
+footer a{
+  text-decoration: none;
+  align-content: center;
+}
+
+.footer-social{
+  margin: 40px 0;
+}
+
+.footer-social a{
+  /*color: #009DDC;*/
+  color: black;
+  height: 40px;
+  width: 40px;
+  margin: 0 7px;
+  line-height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.footer-social a:hover{
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.foot-contact, .foot-contact a{
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  font-weight: 300;
+}
+
+footer div{
+  margin: 1em 0;
+}
+
+#copy-tag{
+  grid-row: 7;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 40px;
+  font-size: 0.7em;
+}
+
+footer hr{
+  margin: 0 auto;
+  width: 60%;
+  text-align: center;
+  border: 0.1px solid rgba(255, 255, 255, 0.6);
+}
+
+/*------------------------------------------WELCOME----------------------------------*/
+
+
+.welcome{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  align-items: center;
+  grid-column: 1;
+  padding: 25vh 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#title{
+  margin: 0;
+  z-index: 3;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  font-weight: 300;
+  font-size: 2.0em;
+  letter-spacing: 1px;
+}
+
+.main {
+  background-image: url("../images/greyzz.png");
+  background-repeat: repeat;
+}
+
+
